@@ -134,6 +134,31 @@
         }
       }
     },
+    "/gratitude/kpi-dashboard": {
+      "get": {
+        "tags": ["Gratitude"],
+        "summary": "Get KPI Dashboard",
+        "parameters": [
+          {
+            "name": "startDate",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
     "/cats": {
       "get": {
         "tags": ["Cats"],
