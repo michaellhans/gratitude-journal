@@ -1,6 +1,7 @@
 import express from 'express'
 import Router from './router'
 import swaggerUi from 'swagger-ui-express'
+import RequestLogger from './services/RequestLogger'
 import * as swaggerDocument from './swagger.json'
 import * as bodyParser from 'body-parser'
 
@@ -12,6 +13,7 @@ class App {
 
     this.httpServer.use(bodyParser.urlencoded({ extended: true }));
     this.httpServer.use(bodyParser.json());
+    this.httpServer.use(RequestLogger.logRequests());
     
     new Router(this.httpServer);
 
