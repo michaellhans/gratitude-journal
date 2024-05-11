@@ -1,11 +1,10 @@
 // Description: This file contains the Gratitude class that is responsible for fetching data from the Google Sheets API.
 import axios from "axios";
-import GratitudeEntry from "./models/GratitudeEntry";
-import FrequencyEntry from "./models/FrequencyEntry";
-import { get } from "http";
+import GratitudeEntry from "../models/GratitudeEntry";
+import FrequencyEntry from "../models/FrequencyEntry";
 
 class Gratitude {
-    private GOOGLE_URL = "https://script.google.com/macros/s/AKfycbyBmNoAZuzmefqe0As2a9F-nznKx6Dc_hqhE9caaqRD1TQVRbfO6FK3IFMzE8EygijZBA/exec";
+    private GOOGLE_URL = "https://script.google.com/macros/s/AKfycbxEu-eFmjL28d-fxdMplxh8-piS5QnDVHochvZNBjJQ7FZtFIQ1ykwLqHXOtxFxmXhiUg/exec";
     private data: GratitudeEntry[];
 
     constructor() {
@@ -22,7 +21,7 @@ class Gratitude {
     }
 
     // Get data from start date to end date
-    public getDataFromRange(startDate, endDate): GratitudeEntry[] {
+    public getGratitudeData(startDate, endDate): GratitudeEntry[] {
         if (startDate === undefined || endDate === undefined) {
             console.log('No date range provided');
             return this.data;
@@ -42,7 +41,7 @@ class Gratitude {
 
     // Get top 10 most mentioned people
     public getTopPeople(startDate, endDate): FrequencyEntry[] {
-        const filteredData = this.getDataFromRange(startDate, endDate);
+        const filteredData = this.getGratitudeData(startDate, endDate);
         let people = filteredData.map(entry => entry.people).flat();
         let peopleCount = {};
         people.forEach(person => {
@@ -57,7 +56,7 @@ class Gratitude {
     
     // Get good habits sorted by frequency
     public getGoodHabits(startDate, endDate): FrequencyEntry[] {
-        const filteredData = this.getDataFromRange(startDate, endDate);
+        const filteredData = this.getGratitudeData(startDate, endDate);
         let habits = filteredData.map(entry => entry.good_habit).flat();
         let habitCount = {};
         habits.forEach(habit => {
@@ -72,7 +71,7 @@ class Gratitude {
 
     // Get bad habits sorted by frequency
     public getBadHabits(startDate, endDate): FrequencyEntry[] {
-        const filteredData = this.getDataFromRange(startDate, endDate);
+        const filteredData = this.getGratitudeData(startDate, endDate);
         let habits = filteredData.map(entry => entry.bad_habit).flat();
         let habitCount = {};
         habits.forEach(habit => {
