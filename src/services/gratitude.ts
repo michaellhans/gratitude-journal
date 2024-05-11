@@ -128,10 +128,11 @@ class Gratitude {
         let dates = filteredData.map(entry => entry.date);
         let dateCount = {};
         dates.forEach(date => {
+            const currentMistakes = filteredData.filter(entry => entry.date === date).map(entry => entry.grateful).flat().length;
             if (dateCount[date.toString()]) {
-                dateCount[date.toString()]++;
+                dateCount[date.toString()] += currentMistakes;
             } else {
-                dateCount[date.toString()] = 1;
+                dateCount[date.toString()] = currentMistakes;
             }
         });
         return Object.keys(dateCount).sort((a, b) => dateCount[b] - dateCount[a]).slice(0, 10).map(date => ({ key: date, value: dateCount[date] }));
