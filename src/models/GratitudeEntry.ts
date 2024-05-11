@@ -1,12 +1,12 @@
 type GratitudeEntry = {
     date: Date;
-    story: String;
-    learned: String;
-    grateful: Array<String>;
-    mistake: Array<String>;
-    people: Array<String>;
-    good_habit: Array<String>;
-    bad_habit: Array<String>;
+    story: string;
+    learned: string;
+    grateful: string[];
+    mistake: string[];
+    people: string[];
+    good_habit: string[];
+    bad_habit: string[];
 }
 
 export default GratitudeEntry;

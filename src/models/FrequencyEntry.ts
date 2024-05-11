@@ -1,6 +1,6 @@
 type FrequencyEntry = {
-    key: String;
-    value: Number;
+    key: string;
+    value: number;
 }
 
 export default FrequencyEntry;
