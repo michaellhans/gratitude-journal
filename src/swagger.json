@@ -28,7 +28,7 @@
   "consumes": ["application/json"],
   "produces": ["application/json"],
   "paths": {
-    "/gratitude": {
+    "/api/gratitude": {
       "get": {
         "tags": ["Gratitude"],
         "summary": "Get all gratitude entries",
@@ -59,7 +59,7 @@
         }
       }
     },
-    "/gratitude/top-people": {
+    "/api/gratitude/top-people": {
       "get": {
         "tags": ["Gratitude"],
         "summary": "Get top 10 people",
@@ -84,7 +84,7 @@
         }
       }
     },
-    "/gratitude/good-habits": {
+    "/api/gratitude/good-habits": {
       "get": {
         "tags": ["Gratitude"],
         "summary": "Get good habits sorted by frequency",
@@ -109,7 +109,7 @@
         }
       }
     },
-    "/gratitude/bad-habits": {
+    "/api/gratitude/bad-habits": {
       "get": {
         "tags": ["Gratitude"],
         "summary": "Get bad habits sorted by frequency",
@@ -134,7 +134,7 @@
         }
       }
     },
-    "/gratitude/kpi-dashboard": {
+    "/api/gratitude/kpi-dashboard": {
       "get": {
         "tags": ["Gratitude"],
         "summary": "Get KPI Dashboard",
@@ -159,7 +159,7 @@
         }
       }
     },
-    "/cats": {
+    "/api/cats": {
       "get": {
         "tags": ["Cats"],
         "summary": "Get all cats in system",
@@ -200,7 +200,7 @@
         }
       }
     },
-    "/cats/{id}": {
+    "/api/cats/{id}": {
       "parameters": [
         {
           "name": "id",
