@@ -1,5 +1,5 @@
 import * as express from 'express'
-import Gratitude from './services/Gratitude';
+import Gratitude from './services/gratitude';
 import cors from 'cors'
 
 class Router {

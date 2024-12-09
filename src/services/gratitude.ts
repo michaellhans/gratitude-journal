@@ -128,7 +128,7 @@ class Gratitude {
         let dates = filteredData.map(entry => entry.date);
         let dateCount = {};
         dates.forEach(date => {
-            const currentMistakes = filteredData.filter(entry => entry.date === date).map(entry => entry.grateful).flat().length;
+            const currentMistakes = filteredData.filter(entry => entry.date === date).map(entry => entry.mistake).flat().join('').length;
             if (dateCount[date.toString()]) {
                 dateCount[date.toString()] += currentMistakes;
             } else {

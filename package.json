@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "nodemon": "^3.0.1"
   }
 }
