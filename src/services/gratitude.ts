@@ -4,7 +4,7 @@ import GratitudeEntry from "../models/GratitudeEntry";
 import FrequencyEntry from "../models/FrequencyEntry";
 
 class Gratitude {
-    private GOOGLE_URL = "https://script.google.com/macros/s/AKfycbw45zhS8dT--VGQo0VUgwt5-veI1DDzRuwABIx2lUTIuGmm9FN2lvf6gHorcwPNITwcqQ/exec";
+    private GOOGLE_URL = "https://script.google.com/macros/s/AKfycbwSCLD3umtrlv_X3_3bhKhWMl2pYU_Lkc795lW2Moi4Id5TVHH02T9YPqhm1c3sxxWS_g/exec";
     private data: GratitudeEntry[];
 
     constructor() {
